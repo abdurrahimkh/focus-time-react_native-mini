@@ -1,6 +1,6 @@
-import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { colors } from '../utils/colors';
+import React from "react";
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { colors } from "../utils/colors";
 
 export const RoundedButton = ({
   style = {},
@@ -11,21 +11,22 @@ export const RoundedButton = ({
   return (
     <TouchableOpacity
       style={[styles(size).radius, style]}
-      onPress={props.onPress}>
+      onPress={props.onPress}
+    >
       <Text style={[styles(size).text, textStyle]}>{props.title}</Text>
     </TouchableOpacity>
   );
 };
 
-const styles = (size) => ({
+const styles = size => ({
   radius: {
-    padding:size,
-    borderRadius: '50%',
+    padding: size,
+    borderRadius: "50%",
     width: size,
     height: size,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderColor: 'gray',
+    alignItems: "center",
+    justifyContent: "center",
+    borderColor: "gray",
     borderWidth: 2,
   },
   text: { color: colors.blue, fontSize: size / 2 },
